@@ -59,6 +59,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // footer email — copy address to clipboard instead of opening a mail client
+  document.querySelectorAll(".email-copy-btn").forEach((btn) => {
+    const originalText = btn.textContent;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      try {
+        navigator.clipboard.writeText("Enzo.canali13@gmail.com")
+          .then(() => {
+            btn.textContent = "Copied!";
+            setTimeout(() => { btn.textContent = originalText; }, 2000);
+          })
+          .catch(() => {});
+      } catch (err) {
+        // clipboard unavailable — fail silently
+      }
+    });
+  });
+
   // tabbed panels
   document.querySelectorAll(".tabs").forEach((tabs) => {
     const buttons = tabs.querySelectorAll(".tab-btn");
