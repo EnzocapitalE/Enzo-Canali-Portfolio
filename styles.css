@@ -540,10 +540,13 @@ section:first-of-type{ border-top:none; }
   border:0;
 }
 
-/* Shake the Summer: description spans the full video width */
-#shake-the-summer .ut-event-head{ flex-wrap:nowrap; align-items:flex-start; }
-#shake-the-summer .ut-event-head > div{ flex:1 1 0; min-width:0; }
-#shake-the-summer .ut-event-head p{ max-width:none; }
+/* Shake the Summer / Rua Coberta: description spans the full content width */
+#shake-the-summer .ut-event-head,
+#rua-coberta .ut-event-head{ flex-wrap:nowrap; align-items:flex-start; }
+#shake-the-summer .ut-event-head > div,
+#rua-coberta .ut-event-head > div{ flex:1 1 0; min-width:0; }
+#shake-the-summer .ut-event-head p,
+#rua-coberta .ut-event-head p{ max-width:none; }
 
 /* Surrealia: video panel on the right; description + photos stacked on the left, matched to video height */
 .surrealia-panels{
