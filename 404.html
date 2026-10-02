@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Enzo Canali — Changeover in Progress</title>
+  <meta name="description" content="Live events portfolio of Enzo Canali. Currently being rebuilt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0b0e;
+      --text: #f2ede4;
+      --muted: #9c948a;
+      --amber: #e8a33d;
+      --rule: #2a2732;
+
+      --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+      --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:
+        max(2rem, env(safe-area-inset-top))
+        1.5rem
+        max(2rem, env(safe-area-inset-bottom));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hold {
+      width: 100%;
+      max-width: 36rem;
+    }
+
+    .kicker {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin: 0 0 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.25rem, 7vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 1.5rem;
+    }
+
+    .body {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .contact {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .copy-email {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .copy-email:hover,
+    .copy-email:focus-visible {
+      color: var(--amber);
+      border-color: var(--amber);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="hold">
+    <p class="kicker">Enzo Canali — Live Events</p>
+    <h1>Changeover in progress.</h1>
+    <p class="body">The site is being reworked behind the scenes. Full return soon.</p>
+    <p class="contact">
+      In the meantime, reach out directly →
+      <button type="button" class="copy-email">Copy email</button>
+    </p>
+  </main>
+
+  <script>
+    document.querySelectorAll(".copy-email").forEach((btn) => {
+      const originalText = btn.textContent;
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        try {
+          navigator.clipboard.writeText("Enzo.canali13@gmail.com")
+            .then(() => {
+              btn.textContent = "Copied!";
+              setTimeout(() => { btn.textContent = originalText; }, 2000);
+            })
+            .catch(() => {});
+        } catch (err) {
+          // clipboard unavailable — fail silently
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,114 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Enzo Canali — Live Events &amp; Atmosphere Design</title>
-<meta name="description" content="Portfolio and research notebook on crowd psychology, event planning, and the craft of designing live experiences.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Enzo Canali — Changeover in Progress</title>
+  <meta name="description" content="Live events portfolio of Enzo Canali. Currently being rebuilt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0b0e;
+      --text: #f2ede4;
+      --muted: #9c948a;
+      --amber: #e8a33d;
+      --rule: #2a2732;
+
+      --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+      --mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:
+        max(2rem, env(safe-area-inset-top))
+        1.5rem
+        max(2rem, env(safe-area-inset-bottom));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hold {
+      width: 100%;
+      max-width: 36rem;
+    }
+
+    .kicker {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin: 0 0 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.25rem, 7vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 1.5rem;
+    }
+
+    .body {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .contact {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .copy-email {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .copy-email:hover,
+    .copy-email:focus-visible {
+      color: var(--amber);
+      border-color: var(--amber);
+      outline: none;
+    }
+  </style>
 </head>
 <body>
-
-<div id="blackout"></div>
-
-<header class="site">
-  <nav class="nav">
-    <a href="index.html" class="brand">Enzo Canali <strong>/</strong> ATMOSPHERE</a>
-    <button class="navtoggle">MENU</button>
-    <div class="navlinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="crowd-psychology.html">Behavior &amp; Reactions</a>
-      <a href="event-planning.html">Intentional Design</a>
-      <a href="past-events.html">About Enzo</a>
-    </div>
-  </nav>
-  <div class="pulse-line"></div>
-</header>
-
-<main>
-
-  <section class="hero" style="border-top:none;">
-    <div class="eyebrow">Live Events &amp; Experience Design</div>
-    <h1>Meaningful experiences don't just happen. They're engineered.</h1>
-    <p class="lede">I'm fascinated with what makes a live event actually work — the planning, the pacing, the feeling in the room. I care deeply about collective effervescence — that feeling of belonging is what I want to spend my life helping people feel.
+  <main class="hold">
+    <p class="kicker">Enzo Canali — Live Events</p>
+    <h1>Changeover in progress.</h1>
+    <p class="body">The site is being reworked behind the scenes. Full return soon.</p>
+    <p class="contact">
+      In the meantime, reach out directly →
+      <button type="button" class="copy-email">Copy email</button>
     </p>
-    <p class="lede-secondary">This site is both a record of my experience and a study in intentional design.</p>
-    <div class="hero-actions">
-      <a href="past-events.html" class="btn btn-primary">See past events</a>
-      <a href="crowd-psychology.html" class="btn btn-ghost">Read the research</a>
-    </div>
-  </section>
+  </main>
 
-  <section>
-    <div class="section-head">
-      <h2>Stats from the field.</h2>
-      
-    </div>
-    <div class="stats">
-  <div class="stat"><p class="stat-line"><span class="stat-strong">$1M+</span> <span class="stat-muted">managed</span></p></div>
-  <div class="stat"><p class="stat-line"><span class="stat-soft">Dozens</span> <span class="stat-muted">of teams coordinated</span></p></div>
-  <div class="stat"><p class="stat-line"><span class="stat-soft">Countless</span> <span class="stat-muted">memorable experiences created</span></p></div>
-</div>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>Two research threads.</h2>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <span class="num">01</span>
-        <h3>Behavior &amp; Reactions</h3>
-        <p>What actually excites a room: BPM curves, lighting color theory, crowd density, and the attention economy underneath it all.</p>
-        <a href="crowd-psychology.html" class="more">Read more →</a>
-      </div>
-      <div class="card">
-        <span class="num">02</span>
-        <h3>Intentional Design</h3>
-        <p>A working framework for throwing a party and shaping the environment around it — from budget to blackout cues.</p>
-        <a href="event-planning.html" class="more">Read more →</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="callout">
-      "Shared joy is doubled joy, shared sorrow is halved sorrow."
-      <cite>Swedish proverb</cite>
-    </div>
-    <p class="callout-note">Sharing experiences with others amplifies them.
-      Laughter gets louder, victory feels bigger, and grief feels lighter.</p>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>Currently</h2>
-      <p>Exploring opportunities in Operations and Logistics.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="past-events.html" class="btn btn-ghost">View experience</a>
-      <a href="#" role="button" class="btn btn-primary email-copy-btn">Email</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site">
-  <div class="footer-inner">
-    <div>
-      <div class="brand">Enzo Canali <strong>/</strong> ATMOSPHERE</div>
-      <div class="footer-note">Live events, festival operations, and a running notebook on why rooms feel the way they feel.</div>
-    </div>
-    <div class="footer-links">
-      <a href="#" role="button" class="email-copy-btn">Email</a>
-      <a href="https://www.linkedin.com/in/enzo-canali" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.instagram.com/canali.enzo" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script>
+    document.querySelectorAll(".copy-email").forEach((btn) => {
+      const originalText = btn.textContent;
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        try {
+          navigator.clipboard.writeText("Enzo.canali13@gmail.com")
+            .then(() => {
+              btn.textContent = "Copied!";
+              setTimeout(() => { btn.textContent = originalText; }, 2000);
+            })
+            .catch(() => {});
+        } catch (err) {
+          // clipboard unavailable — fail silently
+        }
+      });
+    });
+  </script>
 </body>
 </html>
